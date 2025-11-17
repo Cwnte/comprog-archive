@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+/*Write a program that asks the user to input the temperature in Celsius
+If it is below 0 - print "Freezing weather"
+If it is 0-30 - print "Normal weather"
+If it is above 30 - print "Hot weather"*/
+
+int main()
+{
+
+    float temperature;
+
+    printf("WHAT IS CURRENT TEMPERATURE IN YOUR AREA: ");
+    scanf("%f", &temperature);
+
+    if (temperature < 0)
+    {
+        printf("FREEZING WEATHER\n");
+    }
+    else if (temperature <= 30)
+    {
+        printf("NORMAL WEATHER\n");
+    }
+    else
+    {
+        printf("HOT WEATHER\n");
+    }
+
+    return 0;
+}
