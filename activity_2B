@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+int age = 19;
+float height = 1.68;
+char bloodType =
+'O';
+
+double allowance = 1000.00;
+
+printf("AGE: %d \n"
+, age);
+printf("HEIGHT: %.2fcm \n"
+
+, height);
+
+printf("BLOODTYPE: %c \n"
+
+, bloodType);
+
+printf("ALLOWANCE: %.2lf \n"
+
+, allowance);
+
+return 0;
+}
