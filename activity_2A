@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+printf("Hello C \n");
+printf("I'm Vicente Jr C. Del Castillo");
+
+return 0;
+}
