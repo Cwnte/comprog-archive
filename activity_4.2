@@ -1,0 +1,160 @@
+#include <stdio.h>
+/*3. Run the program and input 8 products, each with:
+o Name (fgets)
+o Category (gets)
+o Quantity (integer)
+o Price (float)
+4. The program will:
+o Calculate the total cost for each item (quantity × price).
+o Evaluate whether the item is expensive (price &gt; 100).
+o Calculate the grand total of all items.
+*/
+
+int main() {
+  char itemName[20], category[20];
+  int quantity;
+  float price, total1;
+  
+  char itemName2[20], category2[20];
+  int quantity2;
+  float price2, total2;
+  
+  char itemName3[20], category3[20];
+  int quantity3;
+  float price3, total3;
+  
+  char itemName4[20], category4[20];
+  int quantity4;
+  float price4, total4;
+  
+  char itemName5[20], category5[20];
+  int quantity5;
+  float price5, total5;
+  
+  char itemName6[20], category6[20];
+  int quantity6;
+  float price6, total6;
+  
+  char itemName7[20], category7[20];
+  int quantity7;
+  float price7, total7;
+  
+  char itemName8[20], category8[20];
+  int quantity8;
+  float price8, total8;
+  
+  float grandTotal;
+  
+//1
+  printf("ENTER ITEM 1 NAME: ");
+    fgets(itemName, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price);
+      getchar();
+    total1 = quantity * price;
+    
+//2
+  printf("ENTER ITEM 2 NAME: ");
+    fgets(itemName2, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category2);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity2);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price2);
+      getchar();
+    total2 = quantity2 * price2;
+    
+//3
+  printf("ENTER ITEM 3 NAME: ");
+    fgets(itemName3, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category3);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity3);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price3);
+      getchar();
+  total3 = quantity3 * price3;
+  
+//4
+  printf("ENTER ITEM 4 NAME: ");
+    fgets(itemName4, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category4);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity4);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price4);
+      getchar();
+  total4 = quantity4 * price4;
+
+  //5
+  printf("ENTER ITEM 5 NAME: ");
+    fgets(itemName5, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category5);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity5);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price5);
+      getchar();
+  total5 = quantity5 * price5;
+  
+//6
+  printf("ENTER ITEM 6 NAME: ");
+    fgets(itemName6, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category6);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity6);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price6);
+      getchar();
+  total6 = quantity6 * price6;
+  
+//7
+  printf("ENTER ITEM 7 NAME: ");
+    fgets(itemName7, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category7);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity7);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price7);
+      getchar();
+  total7 = quantity7 * price7;
+  
+//8
+  printf("ENTER ITEM 8 NAME: ");
+    fgets(itemName8, 20, stdin);
+  printf("ENTER CATEGORY: ");
+    gets(category8);
+  printf("ENTER QUANTITY: ");
+    scanf("%d", &quantity8);
+  printf("ENTER PRICE: ");
+    scanf("%f", &price8);
+      getchar();
+  total8 = quantity8 * price8;
+  
+//OUTPUTS
+printf("PRODUCT LIST");
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName, category, quantity, price, total1, (price > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName2, category2, quantity2, price2, total2, (price2 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName3, category3, quantity3, price3, total3, (price3 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName4, category4, quantity4, price4, total4, (price4 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName5, category5, quantity5, price5, total5, (price5 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName6, category6, quantity6, price6, total6, (price6 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName7, category7, quantity7, price7, total7, (price7 > 100 ? "Expensive" : "Affordable"));
+printf("ITEM NAME: %sCATEGORY: %s\nQUANTITY: %d\nPRICE: %.2f pesos\nTOTALCOST: %.2f pesos\nSTATUS: %s\n\n", itemName8, category8, quantity8, price8, total8, (price8 > 100 ? "Expensive" : "Affordable"));
+
+// GRAND TOTAL
+grandTotal = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8;
+printf("GRAND TOTAL OF ALL ITEMS: %.2f pesos\n", grandTotal);
+
+return 0;
+}
