@@ -3,24 +3,16 @@
 int main() {
 int age = 19;
 float height = 1.68;
-char bloodType =
-'O';
+char bloodType ='O';
 
 double allowance = 1000.00;
 
-printf("AGE: %d \n"
-, age);
-printf("HEIGHT: %.2fcm \n"
+printf("AGE: %d \n", age);
+printf("HEIGHT: %.2fcm \n", height);
 
-, height);
+printf("BLOODTYPE: %c \n", bloodType);
 
-printf("BLOODTYPE: %c \n"
-
-, bloodType);
-
-printf("ALLOWANCE: %.2lf \n"
-
-, allowance);
+printf("ALLOWANCE: %.2lf \n", allowance);
 
 return 0;
 }
