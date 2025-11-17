@@ -1,0 +1,185 @@
+#include <stdio.h>
+
+int main(){
+   
+    int seafoodPlatter = 0;
+    int sturiaOscietraCaviar = 0;
+    int jumboShirmmpCocktail = 0;
+    int jumboLumpCrabmeatCocktail = 0;
+    int lobsterCocktail = 0;
+    int freshOyster = 0;
+    int crabCake = 0;
+    int sizzlingKurobuta = 0;
+    int porterHouse = 0;
+    int filetMignon = 0;
+   
+    int choice, qty, removeChoice;
+    float total = 0;
+    float discount = 0;
+    float finalTotal = 0;
+    float discountApplied = 0;
+    int running = 1;
+   
+    //prices
+    float pseafoodPlatter = 5600;
+    float psturiaOscietraCaviar = 8288;
+    float pjumboShirmmpCocktail = 1288;
+    float pjumboLumpCrabmeatCocktail = 1488;
+    float plobsterCocktail = 4298;
+    float pfreshOyster = 2888;
+    float pcrabCake = 988;
+    float psizzlingKurobuta = 798;
+    float pporterHouse = 5688;
+    float pfiletMignon = 4288;
+   
+    while(running) {
+        printf("\n==============================================\n");
+        printf("\n======= FUSION ALLEY FOOD STALL SYSTEM =======\n");
+        printf("\n==============================================\n");
+        printf("1. View Menu\n");
+        printf("2. Add Product\n");
+        printf("3. Remove Product\n");
+        printf("4. Buy/Order\n");
+        printf("5. Change Order Quantity\n");
+        printf("6. Apply Discount (Age / PWD)\n");
+        printf("7. Show Receipt\n");
+        printf("8. Exit\n");
+        printf("===============================================\n");
+        printf("ENTER CHOICE: ");
+        scanf("%d", &choice);
+       
+        switch (choice) {
+        case 1:
+        printf("\n----------- MENU -----------\n");
+        printf("1. SEAFOOD PLATTER - PHP %.2f\n", pseafoodPlatter);
+        printf("2. STURIA OSCIETRA CAVIAR - PHP %.2f\n", psturiaOscietraCaviar);
+        printf("3. JUMBO SHRIMP COCKTAIL - PHP %.2f\n", pjumboShirmmpCocktail);
+        printf("4. JUMBO LUMP CRABMEAT COCKTAIL - PHP %.2f\n", pjumboLumpCrabmeatCocktail);
+        printf("5. LOBSTER COCKTAIL - PHP %.2f\n", plobsterCocktail);
+        printf("6. FRESH OYSTER - PHP %.2f\n", pfreshOyster);
+        printf("7. CRAB CAKE - PHP %.2f\n", pcrabCake);
+        printf("8. SIZZLING KUROBUTA - PHP %.2f\n", psizzlingKurobuta);
+        printf("9. PORTERHOUSE - PHP %.2f\n", pporterHouse);
+        printf("10. FILET MIGNON - PHP %.2f\n", pfiletMignon);
+        printf("----------------------------\n");
+    break;
+        case 2:
+        printf("\nENTER PRODUCT NUMBER: ");
+        scanf("%d", &choice);
+        printf("ENTER QUANTITY: ");
+        scanf("%d", &qty);
+
+    if (choice == 1) seafoodPlatter += qty;
+        else if (choice == 2) sturiaOscietraCaviar += qty;
+        else if (choice == 3) jumboShirmmpCocktail += qty;
+        else if (choice == 4) jumboLumpCrabmeatCocktail += qty;
+        else if (choice == 5) lobsterCocktail += qty;
+        else if (choice == 6) freshOyster += qty;
+        else if (choice == 7) crabCake += qty;
+        else if (choice == 8) sizzlingKurobuta += qty;
+        else if (choice == 9) porterHouse += qty;
+        else if (choice == 10) filetMignon += qty;
+    else printf("INVALID\n");
+
+        printf("PRODUCT SUCCESFULLY ADDED\n");
+    break;
+   
+    case 3:
+        printf("\nENTER PRODUCT NUMBER TO REMOVE: ");
+        scanf("%d", &removeChoice);
+    if (removeChoice == 1) seafoodPlatter = 0;
+        else if (removeChoice == 2) sturiaOscietraCaviar = 0;
+        else if (removeChoice == 3) jumboShirmmpCocktail = 0;
+        else if (removeChoice == 4) jumboLumpCrabmeatCocktail = 0;
+        else if (removeChoice == 5) lobsterCocktail = 0;
+        else if (removeChoice == 6) freshOyster = 0;
+        else if (removeChoice == 7) crabCake = 0;
+        else if (removeChoice == 8) sizzlingKurobuta = 0;
+        else if (removeChoice == 9) porterHouse = 0;
+        else if (removeChoice == 10) filetMignon = 0;
+    else printf("INVALID\n");
+        printf("ITEM REMOVED SUCCESFULLY.\n");
+    break;
+   
+    case 4:
+        printf("\nPROCESSING YOUR ORDER...\n");
+    total = seafoodPlatter * pseafoodPlatter + sturiaOscietraCaviar * psturiaOscietraCaviar + jumboShirmmpCocktail * pjumboShirmmpCocktail +
+        jumboLumpCrabmeatCocktail * pjumboLumpCrabmeatCocktail + lobsterCocktail * plobsterCocktail + freshOyster * pfreshOyster +
+        crabCake * pcrabCake + sizzlingKurobuta * psizzlingKurobuta + porterHouse * pporterHouse +
+        filetMignon * pfiletMignon;
+        printf("ORDER CALCUTED. YOU MAY NOW VIEW RECEIPT.\n");
+    break;
+
+    case 5:
+        printf("\nEnter product number (1-10) to change quantity: ");
+        scanf("%d", &choice);
+        printf("Enter new quantity: ");
+        scanf("%d", &qty);
+    if (choice == 1) seafoodPlatter = qty;
+        else if (choice == 2) sturiaOscietraCaviar = qty;
+        else if (choice == 3) jumboShirmmpCocktail = qty;
+        else if (choice == 4) jumboLumpCrabmeatCocktail = qty;
+        else if (choice == 5) lobsterCocktail = qty;
+        else if (choice == 6) freshOyster = qty;
+        else if (choice == 7) crabCake = qty;
+        else if (choice == 8) sizzlingKurobuta = qty;
+        else if (choice == 9) porterHouse = qty;
+        else if (choice == 10) filetMignon = qty;
+    else printf("INVALID\n");
+        printf("QUANTITY UPDATED SUCCESFULLY\n");
+    break;
+   
+    case 6:
+        printf("\nAPPLY DISCOUNT:\n");
+        printf("1. SENIOR CITIZEN (20%%)\n");
+        printf("2. PWD (20%%)\n");
+        printf("3. NONE\n");
+        printf("ENTER CHOICE: ");
+        scanf("%d", &discountApplied);
+
+    if (discountApplied == 1 || discountApplied == 2)
+        discount = total * 0.20;
+    else
+        discount = 0;
+
+        printf("DISCOUNT APPLIED SUCCESFULLY\n");
+    break;
+   
+    case 7:
+        finalTotal = total - discount;
+        printf("\n=====================================\n");
+        printf(" FUSION ALLEY RECEIPT\n");
+        printf("=====================================\n");
+    if (seafoodPlatter > 0) printf("SEAFOOD PLATTER x%d = PHP %.2f\n", seafoodPlatter, seafoodPlatter * pseafoodPlatter);
+    if (sturiaOscietraCaviar > 0) printf("STURIA OSCIETRA CAVIAR x%d = PHP %.2f\n", sturiaOscietraCaviar, sturiaOscietraCaviar * psturiaOscietraCaviar);
+    if (jumboShirmmpCocktail > 0) printf("JUMBO SHRIMP COCKTAIL x%d = PHP %.2f\n", jumboShirmmpCocktail, jumboShirmmpCocktail * pjumboShirmmpCocktail);
+    if (jumboLumpCrabmeatCocktail > 0) printf("JUMBO LUMP CRABMEAT COCKTAIL x%d = PHP %.2f\n", jumboLumpCrabmeatCocktail, jumboLumpCrabmeatCocktail * pjumboLumpCrabmeatCocktail);
+    if (lobsterCocktail > 0) printf("LOBSTER COCKTAIL x%d = PHP %.2f\n", lobsterCocktail, lobsterCocktail * plobsterCocktail);
+    if (freshOyster > 0) printf("FRESH OYSTER x%d = PHP %.2f\n", freshOyster, freshOyster * pfreshOyster);
+    if (crabCake > 0) printf("CRAB CAKE x%d = PHP %.2f\n", crabCake, crabCake * pcrabCake);
+    if (sizzlingKurobuta > 0) printf("SIZZLING KUROBUTA x%d = PHP %.2f\n", sizzlingKurobuta, sizzlingKurobuta * psizzlingKurobuta);
+    if (porterHouse > 0) printf("PORTERHOUSE x%d = PHP %.2f\n", porterHouse, porterHouse * pporterHouse);
+    if (filetMignon > 0) printf("FILET MIGNON x%d = PHP %.2f\n", filetMignon, filetMignon * pfiletMignon);
+        printf("-------------------------------------\n");
+        printf("TOTAL BEFORE DISOCUNT: PHP %.2f\n", total);
+        printf("DISCOUNT: PHP %.2f\n", discount);
+        printf("FINAL TOTAL: PHP %.2f\n", finalTotal);
+        printf("-------------------------------------\n");
+        printf(" THANK YOU FOR ORDERING!\n");
+        printf("=====================================\n");
+    break;
+
+    case 8:
+        printf("\EXITING SYSTEM... THANK YOU!\n");
+        running = 0;
+    break;
+
+    default:
+        printf("INVALID OPTION\n");
+   
+    }
+    }
+   
+   
+    return 0;
+}
