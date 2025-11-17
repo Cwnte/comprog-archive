@@ -1,0 +1,161 @@
+#include <stdio.h>
+
+int main()
+{
+    char username[20];
+    char password[20];
+    int i, choice;
+    int loggedIn = 0;
+
+    /*Part 1: Registration
+    1. Ask the user to enter a username and password.
+    2. Store these values in variables.
+    3. Confirm successful registration with a message.*/
+
+    printf("\n====== USER REGISTRATION ======\n");
+    printf("ENTER USERNAME: ");
+    scanf("%s", username);
+
+    printf("ENTER PASSWORD: ");
+    scanf("%s", password);
+
+    printf("\nSUCCESSFUL REGISTRATION\n");
+    printf("==============================\n");
+
+
+//---------------------------------------------------------
+
+    /*Part 2: Login (Loop with conditionals)
+    1. Ask the user to enter their username and password.
+    2. If either is incorrect, show an error and prompt again (loop until correct).
+    3. If login is successful, display: "Login successful"*/
+    
+    char inputtedUsername[20];
+    char inputtedPassword[20];
+
+    printf("\n========= LOGIN =========\n");
+
+    while (!loggedIn)
+    {
+        printf("USERNAME: ");
+        scanf("%s", inputtedUsername);
+
+        printf("PASSWORD: ");
+        scanf("%s", inputtedPassword);
+
+        int isUsernameCorrect = 1;
+        int isPasswordCorrect = 1;
+
+        // USERNAME
+        for (i = 0; username[i] != '\0' || inputtedUsername[i] != '\0'; i++)
+        {
+            if (username[i] != inputtedUsername[i])
+            {
+                isUsernameCorrect = 0;
+                break;
+            }
+        }
+
+        // PASSWORD
+        for (i = 0; password[i] != '\0' || inputtedPassword[i] != '\0'; i++)
+        {
+            if (password[i] != inputtedPassword[i])
+            {
+                isPasswordCorrect = 0;
+                break;
+            }
+        }
+
+        if (isUsernameCorrect == 1 && isPasswordCorrect == 1)
+        {
+            printf("\nLOGIN SUCCESSFUL!\n");
+            loggedIn = 1;
+            break;
+        }
+        else
+        {
+            printf("INCORRECT USERNAME OR PASSWORD, TRY AGAIN. \n\n");
+        }
+    }
+
+
+//---------------------------------------------------------
+
+    /*After login, display a menu with these options:
+    1. Change Password
+    2. View Password (masked)
+    3. Logout
+    Use a loop to display the menu until the user logs out.
+    Based on user input (1, 2, or 3), perform the corresponding action.*/
+
+    char oldPassword[20];
+    char newPassword[20];
+
+    while (loggedIn == 1)
+    {
+        printf("\n========= MENU =========\n");
+        printf("1. CHANGE PASSWORD\n");
+        printf("2. VIEW PASSWORD (MASKED)\n");
+        printf("3. LOGOUT\n");
+        printf("=========================\n");
+        printf("ENTER YOUR CHOICE: ");
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            // CHANGE PASSWORD
+            printf("Enter old password: ");
+            scanf("%s", oldPassword);
+
+            // MATCHING PASSWORD
+            int isOldPasswordCorrect = 1;
+            for (i = 0; password[i] != '\0' || oldPassword[i] != '\0'; i++)
+            {
+                if (password[i] != oldPassword[i])
+                {
+                    isOldPasswordCorrect = 0;
+                    break;
+                }
+            }
+
+            if (isOldPasswordCorrect == 1)
+            {
+                printf("ENTER NEW PASSWORD: ");
+                scanf("%s", newPassword);
+
+                // Update password
+                for (i = 0; newPassword[i] != '\0'; i++)
+                {
+                    password[i] = newPassword[i];
+                }
+                password[i] = '\0';
+
+                printf("PASSWORD UPDATED\n");
+            }
+            else
+            {
+                printf("INCORRECT OLD PASSWORD\n");
+            }
+        }
+        else if (choice == 2)
+        {
+            printf("YOUR PASSWORD: ");
+            for (i = 0; password[i] != '\0'; i++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+        else if (choice == 3)
+        {
+            printf("LOGGED OUT. GOODBYE!\n");
+            loggedIn = 0;
+        }
+        else
+        {
+            printf("INVALID CHOICE. TRY AGAIN!\n");
+        }
+    }
+
+    return 0;
+}
