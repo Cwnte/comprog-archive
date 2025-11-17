@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+int main(){
+
+char surName[30];
+char firstName[30];
+char middleInitial[30];
+char program[30];
+char schoolName[30];
+int year;
+float gwa;
+char grade;
+
+printf("ENTER YOUR SURNAME: ");
+scanf("%s"
+
+, surName);
+
+printf("ENTER YOUR FIRSTNAME: ");
+scanf("%s"
+
+, firstName);
+
+printf("ENTER YOUR MIDDLE INITIAL: ");
+scanf("%s"
+
+, middleInitial);
+
+printf("ENTER YOUR PROGRAM: ");
+scanf("%s"
+
+, program);
+
+printf("ENTER SCHOOL NAME: ");
+scanf("%s"
+
+, schoolName);
+
+printf("ENTER YOUR YEAR: ");
+scanf("%d"
+
+, &year);
+
+printf("ENTER YOUR GWA: ");
+scanf("%f"
+
+, &gwa);
+
+printf("ENTER YOUR GRADE IN LETTER (A-F): ");
+scanf(" %c"
+
+, &grade);
+
+printf("NAME: %s, %s %s.\n"
+
+, surName, firstName, middleInitial);
+
+printf("PROGRAM: %s\n"
+
+, program);
+printf("SCHOOL NAME: %s\n"
+
+, schoolName);
+
+printf("YEAR LEVEL: %d\n"
+
+, year);
+
+printf("GWA: %.2f\n"
+, gwa);
+
+printf("GRADE IN LETTER: %c\n"
+
+, grade);
+
+printf("YOU'RE 1 OF 1, ACT LIKE IT.
+");
+
+return 0;
+}
