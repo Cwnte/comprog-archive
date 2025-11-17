@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int age;
+
+    printf("ENTER AGE: ");
+    scanf("%d", &age);
+
+    if (age <= 18) {
+        printf("ELIGIBLE FOR DISCOUNT.\n");
+    } else {
+        printf("NOT ELIGIBLE FOR DISCOUNT.\n");
+    }
+
+    return 0;
+}
