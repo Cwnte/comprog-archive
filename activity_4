@@ -1,0 +1,92 @@
+#include <stdio.h>
+
+int main()
+{
+    char Surname[20];
+    char Firstname[20];
+    char MiddleInitial[2];
+    int Age;
+    char Section;
+    float sub1, sub2, sub3, sub4, sub5, sub6, sub7;
+    char *Remarks;
+    float Sum, Average, DoubleAve;
+
+    float Highest1, Highest2, Highest3, Highest4, Highest5, Highest;
+    float Lowest1, Lowest2, Lowest3, Lowest4, Lowest5, Lowest;
+
+    printf("What is your Surname? : ");
+    scanf("%s", Surname);
+
+    printf("What is your Firstname? : ");
+    scanf("%s", Firstname);
+
+    printf("What is your Middle Initial? : ");
+    scanf("%c", &MiddleInitial);
+
+    printf("How old are you? : ");
+    scanf("%d", &Age);
+
+    printf("What is your Section? : ");
+    scanf("%c", &Section);
+
+    printf("What is your grade in Math? : ");
+    scanf("%f", &sub1);
+
+    printf("What is your grade in Science? : ");
+    scanf("%f", &sub2);
+
+    printf("What is your grade in English? : ");
+    scanf("%f", &sub3);
+
+    printf("What is your grade in Filipino? : ");
+    scanf("%f", &sub4);
+
+    printf("What is your grade in TLE? : ");
+    scanf("%f", &sub5);
+
+    printf("What is your grade in AP? : ");
+    scanf("%f", &sub6);
+
+    printf("What is your grade in ESP? : ");
+    scanf("%f", &sub7);
+
+    Sum = sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7;
+    Average = Sum / 7;
+    DoubleAve = Average + 3;
+    Remarks = (Average >= 75) ? "Passed" : "Failed";
+
+    Highest1 = (sub1 > sub2) ? sub1 : sub2;
+    Highest2 = (sub3 > sub4) ? sub3 : sub4;
+    Highest3 = (sub5 > sub6) ? sub5 : sub6;
+    Highest4 = (Highest1 > Highest2) ? Highest1 : Highest2;
+    Highest5 = (Highest3 > sub7) ? Highest3 : sub7;
+    Highest = (Highest4 > Highest5) ? Highest4 : Highest5;
+
+    Lowest1 = (sub1 < sub2) ? sub1 : sub2;
+    Lowest2 = (sub3 < sub4) ? sub3 : sub4;
+    Lowest3 = (sub5 < sub6) ? sub5 : sub6;
+    Lowest4 = (Lowest1 < Lowest2) ? Lowest1 : Lowest2;
+    Lowest5 = (Lowest3 < sub7) ? Lowest3 : sub7;
+    Lowest = (Lowest4 < Lowest5) ? Lowest4 : Lowest5;
+
+    printf("\n\n------ Student Information System --------\n");
+    printf("My name is %s, %s %c. (Surname, Firstname, MiddleInitial);\n", Surname, Firstname, MiddleInitial);
+    printf("I'm %d years old(s); age);\n", Age);
+    printf("Modulo ng AP is %c (Section);\n", Section);
+    printf("My Section is %c\n", Section);
+    printf("My grade in Math is %.2f\n", sub1);
+    printf("My grade in Science is %.2f\n", sub2);
+    printf("My grade in English is %.2f\n", sub3);
+    printf("My grade in Filipino is %.2f\n", sub4);
+    printf("My grade in TLE is %.2f\n", sub5);
+    printf("My grade in AP is %.2f\n", sub6);
+    printf("My grade in ESP is %.2f\n", sub7);
+    printf("Sum of all grades is %.2f\n", Sum);
+    printf("Average of all grades is %.2f\n", Average);
+    printf("Double Average is %.2f\n", DoubleAve);
+    printf("Remarks: %s\n", Remarks);
+    printf("Highest Grade: %.2f\n", Highest);
+    printf("Lowest Grade: %.2f\n", Lowest);
+
+    return 0;
+}
