@@ -12,69 +12,41 @@ float gwa;
 char grade;
 
 printf("ENTER YOUR SURNAME: ");
-scanf("%s"
-
-, surName);
+scanf("%s", surName);
 
 printf("ENTER YOUR FIRSTNAME: ");
-scanf("%s"
-
-, firstName);
+scanf("%s", firstName);
 
 printf("ENTER YOUR MIDDLE INITIAL: ");
-scanf("%s"
-
-, middleInitial);
+scanf("%s", middleInitial);
 
 printf("ENTER YOUR PROGRAM: ");
-scanf("%s"
-
-, program);
+scanf("%s", program);
 
 printf("ENTER SCHOOL NAME: ");
-scanf("%s"
-
-, schoolName);
+scanf("%s", schoolName);
 
 printf("ENTER YOUR YEAR: ");
-scanf("%d"
-
-, &year);
+scanf("%d", &year);
 
 printf("ENTER YOUR GWA: ");
-scanf("%f"
-
-, &gwa);
+scanf("%f", &gwa);
 
 printf("ENTER YOUR GRADE IN LETTER (A-F): ");
-scanf(" %c"
+scanf(" %c", &grade);
 
-, &grade);
+printf("NAME: %s, %s %s.\n", surName, firstName, middleInitial);
 
-printf("NAME: %s, %s %s.\n"
+printf("PROGRAM: %s\n", program);
+printf("SCHOOL NAME: %s\n", schoolName);
 
-, surName, firstName, middleInitial);
+printf("YEAR LEVEL: %d\n", year);
 
-printf("PROGRAM: %s\n"
+printf("GWA: %.2f\n", gwa);
 
-, program);
-printf("SCHOOL NAME: %s\n"
+printf("GRADE IN LETTER: %c\n", grade);
 
-, schoolName);
-
-printf("YEAR LEVEL: %d\n"
-
-, year);
-
-printf("GWA: %.2f\n"
-, gwa);
-
-printf("GRADE IN LETTER: %c\n"
-
-, grade);
-
-printf("YOU'RE 1 OF 1, ACT LIKE IT.
-");
+printf("YOU'RE 1 OF 1, ACT LIKE IT.");
 
 return 0;
 }
