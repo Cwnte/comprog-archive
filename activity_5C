@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    int units;
+    int bill = 0;
+    int remainingUnits;
+
+    printf("ENTER ELECTRICITY UNIT: ");
+    if ((scanf("%d", &units) != 1) || units < 0)
+    {
+        printf("INVALID INPUT\n");
+        return 1;
+    }
+
+    remainingUnits = units;
+
+    if (remainingUnits > 0)
+    {
+        int chargeable = (remainingUnits > 50) ? 50 : remainingUnits;
+        bill += chargeable * 2;
+        remainingUnits -= chargeable;
+    }
+
+    if (remainingUnits > 0)
+    {
+        int chargeable = (remainingUnits > 100) ? 100 : remainingUnits;
+        bill += chargeable * 3;
+        remainingUnits -= chargeable;
+    }
+
+    if (remainingUnits > 0)
+    {
+        int chargeable = (remainingUnits > 100) ? 100 : remainingUnits;
+        bill += chargeable * 5;
+        remainingUnits -= chargeable;
+    }
+
+    if (remainingUnits > 0)
+    {
+        bill += remainingUnits * 10;
+    }
+
+    printf("YOUR ELECTRIC BILL: %d PESOS\n", bill);
+
+    return 0;
+}
